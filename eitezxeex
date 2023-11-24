@@ -1,0 +1,10 @@
+
+[1mFrom:[0m /home/ec2-user/environment/ver.3/simple/app/controllers/events_controller.rb:17 EventsController#update:
+
+    [1;34m15[0m: [32mdef[0m [1;34mupdate[0m
+    [1;34m16[0m:   @event = [1;34;4mEvent[0m.find(params[[33m:id[0m])
+ => [1;34m17[0m:   binding.pry
+    [1;34m18[0m:   @event = [1;34;4mEvent[0m.update(event_params)
+    [1;34m19[0m:   redirect_to [31m[1;31m'[0m[31m/events/index[1;31m'[0m[31m[0m
+    [1;34m20[0m: [32mend[0m
+

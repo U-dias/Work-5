@@ -1,0 +1,17 @@
+
+<h2>Calendar</h2>
+<%= link_to '新規', new_event_path %>
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+  
+ <ul class="events-list">
+     <% events.each do |event| %>
+     <li class="class">
+         <%= link_to edit_event_path(event.id) do %>
+          <%= event.title %>
+          <%= event.content %>
+         <% end %>
+     </li>
+ </ul>
+ <% end %>
+<% end %>

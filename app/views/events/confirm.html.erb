@@ -1,0 +1,19 @@
+<h3>入力内容確認画面</h3>
+
+<div class="#">
+<p>開始日：<%= @event.start_time%></p>
+</div>
+<div class="#">
+<p>タイトル：<%= @event.title%></p>
+</div>
+<div calss="#">
+<p>内容：<%= @event.content%></p>
+</div>
+
+<%= form_with(model: @event, local: true) do |f| %>
+ <%= f.hidden_field :title %>
+ <%= f.hidden_field :content %>
+ <%= f.hidden_field :start_time %>
+ <%= f.submit "送信" %>
+ <%= f.submit "戻る",name: :back %>
+<% end %>

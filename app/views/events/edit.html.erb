@@ -1,0 +1,28 @@
+<h1>イベントの編集</h1>
+
+
+<%= form_for(@event, url:{controller: 'events', action: 'update', id: @event.id}) do |form| %>
+
+<div>
+  <p>start time</p>
+  <input type="text" value="<%= @event.start_time %>" @event="new_event">
+</div>
+<div>
+  <P>title</P>
+  <input type="text" value="<%= @event.title %>" @event="new_event">
+</div>
+<div>
+  <p>content</p>
+  <input type="text_area" value="<%= @event.content %>" @event="new_event">
+</div>
+
+<%= hidden_field :event_id, :value => @event.id %>
+
+<div>
+  <%= form.submit "更新" %>
+</div>
+<div>
+  <input type="reset" value="リセット">
+</div>
+
+<% end %>

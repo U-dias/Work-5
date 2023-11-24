@@ -1,0 +1,24 @@
+<h1>新規イベント</h1>
+
+<%= form_with(model: @event, url:confirm_events_path, local: true) do |f| %>
+
+  <div class="time">
+    <%= f.label :開始日 %>
+    <%= f.datetime_select :start_time %>
+  </div>
+  
+  <div class="title">
+    <%= f.label :タイトル %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="content">
+    <%= f.label :内容 %>
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="submit">
+    <%= f.submit "確認画面へ",class:"#" %>
+  </div>
+
+<% end %>
